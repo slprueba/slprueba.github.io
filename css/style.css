@@ -42,7 +42,6 @@ video{
     align-items: center;
     width: 60%;
     margin: auto;
-    padding-top: 3rem;
     gap: 3rem;
     position: relative;
     z-index: 2;
@@ -206,14 +205,18 @@ header{
 }
 /* RESPONSIVE COMPUTADORA */
 @media(min-width:960px){
+    
     .contenedor{
+        width: 100%;
         gap: 4.5rem;
+        justify-content: space-around;
     }
     header{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 15rem;
+        gap: 8rem;
+        width: 100%;
     }
     .header__logo{
         width: 23rem;
@@ -222,28 +225,28 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2.5rem;
+        gap: 1.5rem;
     }
     .nav__link{
         font-family: var(--fuenteprincipal);
         color: var(--blanco);
         font-weight: bold;
-        width: 4.3rem;
     }
     .nav__link:hover{
         color: var(--amarillo);
     }
     .hero__texto{
+        width: 100%;
         font-size: 2.5rem;
     }
     .hero__lista{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         align-items:flex-start;
-        gap: 1rem;
+        gap: 4rem;
     }
     .hero__lista__elemento{
-        width: 10rem;
         text-align: center;
         color: var(--blanco);
         font-family: var(--fuenteprincipal);
@@ -297,16 +300,27 @@ header{
 }
 @media(min-width:1320px){
     .hero__texto{
-
         font-size: 3.5rem;
     }
-    .header__logo{
-        width: 40rem;
+}
+@media(min-width:1360px){
+    .hero__texto{
+        font-size: 3.6rem;
+    }
+}
+@media(min-width:1400px){
+    .hero__texto{
+        font-size: 3.7rem;
+    }
+}
+@media(min-width:1440px){
+    .hero__texto{
+        font-size: 3.8rem;
     }
 }
 /* MAIN */
 .fondo{
-    background: linear-gradient( rgb(255, 255, 255), rgb(5, 5, 5));
+    /* background: linear-gradient( rgb(255, 255, 255), rgb(5, 5, 5)); */
 }
 /* CONTACTO */
 #contacto{
@@ -316,6 +330,7 @@ header{
     margin: auto;
     height: 60vh;
     color: rgb(0, 0, 0);
+    z-index: 2;
 }
 .contacto__contenedor{
     display: flex;
@@ -387,7 +402,7 @@ header{
     margin: 0.5rem;
     position: relative;
     border-radius: 1rem;
-    box-shadow: 1rem 1rem 5rem #333;
+    /* box-shadow: 1rem 1rem 5rem #333; */
     
 }
 .fondo-card{
@@ -574,6 +589,16 @@ width: 5rem;
         } 
     }
 
+.imagenmontañafooter{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    /* background: #F9F35D; */
+    transition: 2s;
+}
 
 /* FOOTER */
 .footer__contenedor{

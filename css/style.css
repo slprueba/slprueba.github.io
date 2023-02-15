@@ -317,9 +317,9 @@ header{
     }
 }
 /* MAIN */
-.fondo{
+/* .fondo{
     /* background: linear-gradient( rgb(255, 255, 255), rgb(5, 5, 5)); */
-}
+
 /* CONTACTO */
 #contacto{
     display: flex;
@@ -458,43 +458,42 @@ header{
     font-size: large;
 }
 .informacion__card p{
-    font-size: medium;
+    font-size: 0.9rem;
 }
 
 .servicios__btn{
     padding: 0.4rem 0.6rem;
-    background: #F9F35D;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-size: small;
     font-weight: bold;
-    text-decoration: none;
     font-family: var(--fuenteprincipal);
-    /* border: solid #333 0.1rem; */
+    border: solid var(--blanco) 0.1rem;
     border-radius: 5rem;
-    box-shadow: 0 0 1rem #F9F35D, 0 0 4rem
-    #F9F35D, 0 0 8rem #F9F35D;
 }
-.clientes{
+
+
+.proyectos{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     justify-content: center;
 }
-.clientes h2{
+.proyectos h2{
     font-size: small;
     padding-top: 2rem;
     color:#ffffff
 }
-.clientes__marcas{
+.proyectos__marcas{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     margin-bottom: 2rem ;
 }
-.clientes__marcas img{
+.proyectos__marcas img{
 width: 5rem;
 }
 @media(min-width:960px){

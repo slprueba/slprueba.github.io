@@ -70,7 +70,7 @@ header{
 }
 
 /*ESTILO AL BOTON DEL HERO*/
-.hero__btn{
+/* .hero__btn{
     position: relative;
     display: inline-block;
     padding: 1rem 0.8rem;
@@ -143,7 +143,7 @@ header{
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.85s;
-}
+} */
 /* LISTA DE SERVICIOS */
 .hero__lista{
     display: none;
@@ -347,11 +347,47 @@ header{
 
 }
 .contacto__presentacion p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
     font-weight: bold;
 }
-.contacto__presentacion ul{
+@media(min-width:334px){
+    .contacto__presentacion p{
+    font-size: 1rem;
+    }
+}
+@media(min-width:375px){
+    .contacto__presentacion p{
+    font-size: 1.1rem;
+    }
+}
+@media(min-width:390px){
+    .contacto__presentacion p{
+    font-size: 1.2rem;
+    }
+}
+
+@media(min-width:419px){
+    .contacto__presentacion p{
+    font-size: 1.1rem;
+    }
+}
+@media(min-width:434px){
+    .contacto__presentacion p{
+    font-size: 1.3rem;
+    }
+}
+@media(min-width:451px){
+    .contacto__presentacion p{
+    font-size: 1.2rem;
+    }
+}
+@media(min-width:470px){
+    .contacto__presentacion p{
+    font-size: 1.4rem;
+    }
+}
+/* .contacto__presentacion ul{
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -362,7 +398,7 @@ header{
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0; 
-    /* border: solid 0.1rem #333; */
+    border: solid 0.1rem #333; 
     border-radius: 1rem;
     box-shadow: 1rem 1rem 5rem #333;
 }
@@ -375,7 +411,7 @@ header{
 }
 .contactoDatos__numero svg{
     padding-left: 0.5rem;
-}
+} */
 
 
 /* SERVICIOS */
@@ -389,7 +425,7 @@ header{
 .servicios__contenedor{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 }
@@ -401,7 +437,7 @@ header{
     gap: 0.7rem;
 }
 .servicios__presentacion h2{
-    font-size: x-small;
+    font-size: small;
     padding-top: 2rem;
 }
 .servicios__presentacion p{
@@ -429,12 +465,12 @@ header{
 }
 .fondo-card{
     height: 30rem;
-    width: 17rem;
+    width: 19rem;
     border-radius: 1rem;
 }
 .informacion__card{
     height: 30rem;
-    width: 17rem;
+    width: 19rem;
     padding: 0.5rem;
     position: absolute;
     top: 0;
@@ -444,7 +480,7 @@ header{
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    background: rgba(249, 243, 93, 0.3);
+    background: rgba(249, 243, 93, 0.7);
     border-radius: 1rem;
     color: rgb(0, 0, 0);
 }
@@ -458,10 +494,10 @@ header{
     font-size: large;
 }
 .informacion__card p{
-    font-size: 0.9rem;
+    font-size: medium;
 }
 
-.servicios__btn{
+/* .servicios__btn{
     padding: 0.4rem 0.6rem;
     color: rgb(255, 255, 255);
     font-size: 1rem;
@@ -470,20 +506,20 @@ header{
     font-family: var(--fuenteprincipal);
     border: solid var(--blanco) 0.1rem;
     border-radius: 5rem;
-}
+} */
 
 
 .proyectos{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
 }
 .proyectos h2{
-    font-size: small;
+    font-size: medium;
     padding-top: 2rem;
-    color:#ffffff
+    color:#fffff1
 }
 .proyectos__marcas{
     display: flex;
@@ -494,7 +530,43 @@ header{
     margin-bottom: 2rem ;
 }
 .proyectos__marcas img{
-width: 5rem;
+    width: 5rem;
+}
+.proyectos p{
+    font-size: 1rem;
+    color: #fffff1;
+}
+.proyectos ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fffff1;
+    gap: 0.4rem;
+}
+@media(min-width:960px){
+    .proyectos p{
+        font-size: 1rem;
+        color: #fffff1;
+        margin-bottom: 1rem;
+    }
+    .proyectos ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: #fffff1;
+        gap: 0;
+     
+    }
+    .proyectos li{
+        border-right: 1px solid #fffff1;
+        padding:0 0.5rem;
+        text-align: center;
+    }
+    .proyectos li:last-child{
+        border: none;
+    }
 }
 @media(min-width:960px){
     .servicios__contenedor{
@@ -584,32 +656,68 @@ width: 5rem;
     }
 }
 /* ANIMACIONES DE LOS CARD */
-    .hidden{
-        opacity: 0;
-        filter: blur(5px);
-        transform:translatex(-100%);
-        transition: all 1s;
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform:translatex(-100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform:translatex(0);
+}
+@media(min-width:960px){
+    .card:nth-child(2){
+        transition-delay: 200ms;
     }
-    .show{
-        opacity: 1;
-        filter: blur(0);
-        transform:translatex(0);
+    .card:nth-child(3){
+        transition-delay: 400ms;
     }
-    @media(min-width:960px){
-        .card:nth-child(2){
-            transition-delay: 200ms;
-        }
-        .card:nth-child(3){
-            transition-delay: 400ms;
-        }
-        .card:nth-child(4){
-            transition-delay: 600ms;
-        }
-        .card:nth-child(5){
-            transition-delay: 800ms;
-        } 
+    .card:nth-child(4){
+        transition-delay: 600ms;
     }
+    .card:nth-child(5){
+        transition-delay: 800ms;
+    } 
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0;
+    padding: 0 0.5rem;
+}
+.contacto p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #fffff1;
+}
+.contacto a{
+    margin-bottom: 1rem;
+    color: #fcfcfc;
+    padding-bottom: 0.1rem;
+    border-bottom: solid 1px #F9F35D;
+}
+@media(min-width:960px){
 
+    .contacto p{
+        font-weight: bold;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #fffff1;
+    }
+    .contacto a{
+        margin-bottom: 1rem;
+        color: #fcfcfc;
+        padding-bottom: 0.1rem;
+        border-bottom: solid 1px #F9F35D;
+}
+}
 .imagenmontañafooter{
     max-width: 900px;
     margin: 0 auto;
@@ -617,7 +725,6 @@ width: 5rem;
 .overlay{
     height: 100%;
     width: 100%;
-    /* background: #F9F35D; */
     transition: 2s;
 }
 
@@ -663,13 +770,13 @@ width: 5rem;
         flex-direction: column;
         gap:1rem;
     }
-    .indice__lista li{
+    /* .indice__lista li{
         transition: 2s;
     }
     .indice__lista li:hover{
         border-bottom: solid 0.1rem #F9F35D;
         
-    }
+    } */
     .redes{
         display: flex;
         justify-content: center;
